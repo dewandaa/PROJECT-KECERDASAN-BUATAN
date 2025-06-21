@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/blog.css">
+    <title>Blog - Prediksi Penyakit Paru-Paru</title>
+    
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🫁</div>
+                <span>Prediksi Penyakit Paru-Paru</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home">Home</a></li>
+                <li><a href="/">Prediksi</a></li>
+                <li><a href="blog" class="active">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <section class="blog-header">
+            <h1 class="blog-title">Blog Kesehatan Paru-Paru</h1>
+            <p class="blog-subtitle">Pelajari lebih lanjut tentang berbagai kondisi paru-paru dan cara pencegahannya</p>
+        </section>
+
+        <section class="quick-stats fade-in">
+            <div class="stat-card">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Artikel Utama</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Terverifikasi Medis</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">2025</span>
+                <span class="stat-label">Update Terbaru</span>
+            </div>
+        </section>
+
+        <section class="blog-posts fade-in">
+            <article class="blog-post floating">
+                <div class="blog-post-header">
+                    <div class="post-icon bacterial-pneumonia">🦠</div>
+                    <div class="post-meta">
+                        <h2 class="post-title">Pneumonia Bakteri</h2>
+                        <span class="post-category">Infeksi Bakteri</span>
+                    </div>
+                </div>
+                <div class="blog-post-content">
+                    <p class="post-excerpt">
+                        Pneumonia bakteri adalah infeksi serius yang menyerang kantung udara di paru-paru. Kondisi ini disebabkan oleh berbagai jenis bakteri, dengan Streptococcus pneumoniae sebagai penyebab paling umum. Gejala dapat berkembang dengan cepat dan memerlukan penanganan medis segera.
+                    </p>
+                </div>
+            </article>
+
+            <article class="blog-post floating" style="animation-delay: 0.2s;">
+                <div class="blog-post-header">
+                    <div class="post-icon covid19">🦠</div>
+                    <div class="post-meta">
+                        <h2 class="post-title">COVID-19</h2>
+                        <span class="post-category">Virus Corona</span>
+                    </div>
+                </div>
+                <div class="blog-post-content">
+                    <p class="post-excerpt">
+                        COVID-19 adalah penyakit yang disebabkan oleh virus SARS-CoV-2. Virus ini dapat menyerang sistem pernapasan dan menyebabkan gejala yang bervariasi dari ringan hingga berat. Penting untuk memahami gejala, pencegahan, dan protokol kesehatan yang tepat.
+                    </p>
+                    
+                </div>
+            </article>
+
+            <article class="blog-post floating" style="animation-delay: 0.4s;">
+                <div class="blog-post-header">
+                    <div class="post-icon normal">✅</div>
+                    <div class="post-meta">
+                        <h2 class="post-title">Paru-Paru Sehat</h2>
+                        <span class="post-category">Kondisi Normal</span>
+                    </div>
+                </div>
+                <div class="blog-post-content">
+                    <p class="post-excerpt">
+                        Paru-paru yang sehat adalah kunci untuk kehidupan yang berkualitas. Pelajari cara menjaga kesehatan paru-paru melalui gaya hidup sehat, olahraga teratur, dan menghindari faktor risiko yang dapat merusak fungsi pernapasan Anda.
+                    </p>
+                </div>
+            </article>
+
+            <article class="blog-post floating" style="animation-delay: 0.6s;">
+                <div class="blog-post-header">
+                    <div class="post-icon tuberculosis">🔬</div>
+                    <div class="post-meta">
+                        <h2 class="post-title">Tuberkulosis (TBC)</h2>
+                        <span class="post-category">Infeksi Mycobacterium</span>
+                    </div>
+                </div>
+                <div class="blog-post-content">
+                    <p class="post-excerpt">
+                        Tuberkulosis adalah penyakit infeksi yang disebabkan oleh bakteri Mycobacterium tuberculosis. TBC terutama menyerang paru-paru tetapi juga dapat mempengaruhi bagian tubuh lainnya. Deteksi dini dan pengobatan yang tepat sangat penting untuk kesembuhan.
+                    </p>
+                </div>
+            </article>
+
+            <article class="blog-post floating" style="animation-delay: 0.8s;">
+                <div class="blog-post-header">
+                    <div class="post-icon viral-pneumonia">🦠</div>
+                    <div class="post-meta">
+                        <h2 class="post-title">Pneumonia Virus</h2>
+                        <span class="post-category">Infeksi Virus</span>
+                    </div>
+                </div>
+                <div class="blog-post-content">
+                    <p class="post-excerpt">
+                        Pneumonia virus adalah infeksi paru-paru yang disebabkan oleh berbagai jenis virus. Kondisi ini umumnya lebih ringan dibandingkan pneumonia bakteri, tetapi tetap memerlukan perhatian medis. Sistem kekebalan tubuh berperan penting dalam pemulihan.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </div>
+
+    <script>
+        // Scroll Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add dynamic background particles
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: fixed;
+                width: 3px;
+                height: 3px;
+                background: rgba(255, 255, 255, 0.4);
+                border-radius: 50%;
+                pointer-events: none;
+                z-index: -1;
+                left: ${Math.random() * 100}vw;
+                top: 100vh;
+                animation: floatUp ${Math.random() * 4 + 3}s linear forwards;
+            `;
+            document.body.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 6000);
+        }
+
+        // Add CSS for particle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes floatUp {
+                to {
+                    transform: translateY(-100vh);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Create particles periodically
+        setInterval(createParticle, 400);
+
+        // Blog post hover effects
+        document.querySelectorAll('.blog-post').forEach(post => {
+            post.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            post.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add typing effect to blog title
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            setTimeout(type, 500);
+        }
+
+        // Initialize typing effect when page loads
+        window.addEventListener('load', () => {
+            const blogTitle = document.querySelector('.blog-title');
+            const originalText = blogTitle.textContent;
+            typeWriter(blogTitle, originalText, 80);
+        });
+    </script>
+</body>
+</html>
